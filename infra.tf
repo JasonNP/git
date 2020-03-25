@@ -1,13 +1,15 @@
-variables
+variable numero {
+  default=1
+}
 
 resource "azurerm_storage_account" "example" {
-  name                     = "stac"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  name                     = "stac"${var.numero}
+  resource_group_name      = RSGREU2XXXXD01
+  location                 = eastus2
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
   tags = {
-    environment = "staging"
+    environment = "develop"
   }
 }
