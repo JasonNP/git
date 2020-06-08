@@ -1,5 +1,5 @@
 variable numero {
-  default=1
+  default=2
 }
 
 resource "azurerm_storage_account" "example" {
